@@ -37,7 +37,7 @@ toc: true
 # jQuery fancybox
 fancybox: true
 
-pjax: true
+pjax: false
 
 # LaTeX support (via MathJax)
 latex: false
