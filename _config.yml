@@ -11,7 +11,7 @@ favicon: /favicon.ico
 # Set feed link (false | default | your feed link)
 # false: disable
 # default: use `atom.xml`, generator for `hexo-generator-feed`
-rss: default
+rss: atom.xml
 
 # ===========================================
 # Menu Settings
@@ -20,8 +20,8 @@ menu:
   Home: /
   # Archives: /archives/
   # Tags: /tags/
-  # Categories: /categories/
-  # About: /about/
+  Categories: /categories.html
+  About: /about.html
 
 # ===========================================
 # Theme Settings
@@ -63,7 +63,7 @@ social:
   facebook:
   linkedin:
   google:
-  github: https://github.com/ahonn
+  github: https://github.com/
   weibo:
   zhihu:
   douban:
