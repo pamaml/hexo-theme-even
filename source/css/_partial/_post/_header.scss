@@ -53,5 +53,15 @@
         content: '·';
       }
     }
+
+    .post-count {
+      display: inline-block;
+      font-size: 14px;
+      color: $post-meta-font-color;
+
+      &::before {
+        content: '·';
+      }
+    }
   }
 }

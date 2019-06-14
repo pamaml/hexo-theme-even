@@ -34,6 +34,18 @@
               <span class="leancloud-visitors-count">1000</span>
           </span>
         {%- endif -%}
+        {%- if theme.wordcount and theme.wordcount.post -%}
+          <span class="post-count">
+            {{ __('posts.wordcount') }}
+            {{ wordcount(post.content) }}
+          </span>
+        {%- endif -%}
+        {%- if theme.wordcount and theme.wordcount.time -%}
+          <span class="post-count">
+            {{ __('posts.readingtime') }}
+            {{ min2read(post.content) }}
+          </span>
+        {%- endif -%}        
       </div>
     </header>
 

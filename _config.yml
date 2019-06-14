@@ -112,6 +112,13 @@ changyan:
 #LiveRe
 livere_datauid:
 
+#Wordcount
+wordcount:
+  enable: ture
+  post: ture
+  total: ture
+  time: ture
+
 # ===========================================
 # Version
 # ===========================================

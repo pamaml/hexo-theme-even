@@ -11,6 +11,13 @@
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
+  {%- if theme.wordcount and theme.wordcount.total -%}
+  <span class="post-count">
+    {{ __('posts.total') }}
+    {{ totalcount(site) }}
+  </span>
+  {%- endif -%}
+
   <span class="copyright-year">
     {%- set current = date(Date.now(), "YYYY") -%}
     &copy;
