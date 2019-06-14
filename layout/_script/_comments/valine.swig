@@ -10,7 +10,8 @@
         app_id: "{{ theme.valine.appid }}",
         app_key: "{{ theme.valine.appkey }}",
         placeholder: "{{ theme.valine.placeholder }}",
-        avatar: '{{ theme.valine.avatar }}'
+        avatar: '{{ theme.valine.avatar }}',
+        visitor: 'ture'
     });
 </script>
 {%- endif -%}

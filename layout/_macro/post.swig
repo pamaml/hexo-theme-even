@@ -27,6 +27,13 @@
           {{ __('posts.visits') }} 0
         </span>
         {%- endif -%}
+        {%- if theme.valine.visitor -%}
+        {#- id 将作为查询条件 -#}
+          <span id="{{ url_for(post.path) }}" class="leancloud-visitors" data-flag-title="{{ post.title }}">
+              {{ __('posts.visits') }}
+              <span class="leancloud-visitors-count">1000</span>
+          </span>
+        {%- endif -%}
       </div>
     </header>
 
