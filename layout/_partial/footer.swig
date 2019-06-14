@@ -2,14 +2,18 @@
 {%- include "./_footer/social.swig" -%}
 
 <div class="copyright">
-  <span class="power-by">
-    {{ __('footer.powered', '<a class="hexo-link" href="https://hexo.io/">Hexo</a>') }}
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    {{ __('footer.theme') }} - 
-    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
-  </span>
+  {%- if theme.footer.power-by -%}
+    <span class="power-by">
+      {{ __('footer.powered', '<a class="hexo-link" href="https://hexo.io/">Hexo</a>') }}
+    </span>
+  {%- endif -%}
+  <span class="division">&nbsp;</span>
+  {%- if theme.footer.theme-info -%}
+    <span class="theme-info">
+      {{ __('footer.theme') }} - 
+      <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+    </span>
+  {%- endif -%}
 
   {%- if theme.wordcount and theme.wordcount.total -%}
   <span class="post-count">
