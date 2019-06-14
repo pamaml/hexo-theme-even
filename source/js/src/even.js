@@ -6,7 +6,6 @@
   }
 
   Even.prototype.setup = function() {
-    var leancloud = this.config.leancloud;
 
     this.navbar();
     this.responsiveTable();
@@ -17,9 +16,6 @@
     }
     if (this.config.fancybox) {
       this.fancybox();
-    }
-    if (leancloud.app_id && leancloud.app_key) {
-      this.recordReadings();
     }
     if (this.config.pjax) {
       this.pjax();
@@ -145,7 +141,7 @@
       });
     }
   };
-
+/*
   Even.prototype.recordReadings = function () {
     if (typeof AV !== 'object') return;
 
@@ -221,7 +217,7 @@
         });
       })
     }
-  };
+  };*/
 
   Even.prototype.pjax = function () {
     if (location.hostname === 'localhost' || this.hasPjax) return;
