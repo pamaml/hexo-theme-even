@@ -75,7 +75,7 @@ $global-headings: (
 // ========== Header ========== //
 // Padding of the site header.
 $header-padding: 20px 20px !default;
-
+/*
 // Font family: Chancery
 @font-face {
   font-family: 'Chancery';
@@ -88,12 +88,28 @@ $header-padding: 20px 20px !default;
   font-weight: lighter;
   font-style: normal;
 }
+*/
+
+// Font family: techstack
+@font-face {
+  font-family: 'techstack';
+  src: url('../fonts/techstack/techstack.eot') format('embedded-opentype'); /* IE9 */
+  src: url('../fonts/techstack/techstack.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  
+  url('../fonts/techstack/techstack.woff') format('woff'), /* chrome、firefox */
+  url('../fonts/techstack/techstack.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  
+  url('../fonts/techstack/techstack.svg#techstack') format('svg'); /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
+
 
 // Font size of the logo.
-$logo-font-size: 48px !default;
+$logo-font-size: 36px !default;
 
 // Font family of the logo.
-$logo-font-family: 'Chancery', cursive, LiSu, sans-serif !default;
+$logo-font-family: 'techstack', cursive, LiSu, sans-serif !default;
 
 // Margin of menu item.
 $menu-item-margin-left: 10px !default;
