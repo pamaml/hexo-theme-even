@@ -27,7 +27,7 @@ menu:
 # Theme Settings
 # ===========================================
 # color: default | mint green | cobalt blue | hot pink | dark violet
-color: default
+color: cobalt blue
 
 # default page mode: default | archives
 mode: default
@@ -57,13 +57,13 @@ reward:
 # Social links Settings
 # ===========================================
 social:
-  email: your@email.com
+  email: 
   stack-overflow:
   twitter:
   facebook:
   linkedin:
   google:
-  github: https://github.com/
+  github: 
   weibo:
   zhihu:
   douban:
@@ -80,6 +80,8 @@ leancloud:
   app_id:
   app_key:
 
+# 分析和推送
+analytics: false
 # Baidu Analytics
 baidu_analytics:
 # Baidu Verification
