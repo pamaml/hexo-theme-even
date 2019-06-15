@@ -35,7 +35,7 @@ mode: default
 toc: true
 
 # jQuery fancybox
-fancybox: true
+fancybox: false
 
 pjax: false
 
