@@ -16,7 +16,11 @@ posts:
   next_post: 下一篇
   toc: 文章目录
   readmore: 阅读更多
+  visits: '阅读数'
   reward: '赞赏支持'
+  wordcount: '字数统计'
+  readingtime: '阅读时长'
+  total: '全站字数'
 
 copyright:
   author: '原文作者'
