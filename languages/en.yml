@@ -18,7 +18,10 @@ posts:
   readmore: Read more..
   visits: Visits
   reward: 'Reward'
-
+  wordcount: 'wordcount'
+  readingtime: 'reading time'
+  total: 'total'
+  
 copyright:
   author: 'Author'
   link: 'Link'

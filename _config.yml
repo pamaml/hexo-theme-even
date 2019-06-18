@@ -3,7 +3,11 @@
 # ===========================================
 
 # Site creation time
-since: 2015
+since: 
+  enable: ture
+  year: 2015
+# style: default | during
+  style: default
 
 # Custom your favicon.ico in `site/source`
 favicon: /favicon.ico

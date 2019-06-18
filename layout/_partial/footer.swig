@@ -24,11 +24,15 @@
 
   <span class="copyright-year">
     {%- set current = date(Date.now(), "YYYY") -%}
-    &copy;
-    {%- if theme.since and theme.since != current -%}
-      {{ theme.since }} - {{ current }}
-    {%- else -%}
-      {{ current }}
+   
+    {%- if theme.since -%}
+      {%- if theme.since.style != during -%}
+        since {{ theme.since.year }}
+      {%- elif theme.since != current -%}
+       &copy;{{ theme.since.year }} - {{ current }}
+      {%- else -%}
+        {{ current }}
+      {%- endif -%} 
     {%- endif -%} 
 
     <span class="heart">
