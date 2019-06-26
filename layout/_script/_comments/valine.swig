@@ -1,7 +1,7 @@
 {%- if theme.valine.appid and theme.valine.appkey -%}
 {#- valine Comments -#}
-<script src="./lib/valine/2nd/av-min.js?v=3.0.4"></script>
-<script src='./lib/valine/2nd/Valine.min.js'></script>
+<script src="./lib/valine/av-min.js?v=3.0.4"></script>
+<script src='./lib/valine/Valine.min.js'></script>
 <script type="text/javascript">
     new Valine({
         el: '#vcomments',
