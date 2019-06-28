@@ -7,7 +7,7 @@ A super simple theme for Hexo
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ahonn/hexo-theme-even/master/LICENSE)
 
 ## Demo
-[在线预览 Demo](http://ahonn.github.io/hexo-theme-even)
+[在线预览 Demo](https://demo.jpg)
 
 ## Feature
 - 自定义样式
@@ -16,14 +16,44 @@ A super simple theme for Hexo
 - 文章打赏，添加二维码
 - 支持 LaTeX（使用 MathJax）
 
-## Screenshots
-![even-screenshots](http://ouv0frko5.bkt.clouddn.com/blog/6n2zu.png)
+
+
+# Modify
+
+* 删除原来hexo的主页，保留归档页面作为首页
+
+* 替换大部分CDN资源为本地资源，以加快访问速度。
+
+* 修改logo字体，修改footer
+
+
+
+
 
 ## Installation
 ```bash
-$ npm install hexo-renderer-scss --save
-$ git clone https://github.com/ahonn/hexo-theme-even themes/even
+# 安装淘宝npm源
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org 
+#卸载hexo自带index插件
+$ cnpm uninstall hexo-generator-index --save
+# 安装scss插件（主题需要）
+$ cnpm install hexo-renderer-scss --save
+# 克隆仓库
+$ git clone https://github.com/retp/hexo-theme-even themes/even
 ```
+
+
+
+# install some plugins
+
+```bash
+$ cnpm isntall hexo-abbrlink --save
+$ cnpm install hexo-neat --save
+$ cnpm install hexo-wordcount --save
+$ cnpm install hexo-asset-img --save
+```
+
+
 
 修改配置文件中的 `theme` 字段为 `even`:
 
