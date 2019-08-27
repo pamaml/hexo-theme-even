@@ -50,7 +50,7 @@ $ git clone https://github.com/retp/hexo-theme-even themes/even
 $ cnpm isntall hexo-abbrlink --save
 $ cnpm install hexo-neat --save
 $ cnpm install hexo-wordcount --save
-$ cnpm install hexo-asset-img --save
+$ cnpm install hexo-asset-image --save
 ```
 
 
