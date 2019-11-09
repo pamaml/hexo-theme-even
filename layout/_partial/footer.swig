@@ -27,7 +27,7 @@
    
     {%- if theme.since -%}
       {%- if theme.since.style != during -%}
-        since {{ theme.since.year }}
+        Since {{ theme.since.year }}
       {%- elif theme.since != current -%}
        &copy;{{ theme.since.year }} - {{ current }}
       {%- else -%}

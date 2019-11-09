@@ -10,6 +10,8 @@
 <meta name="msapplication-navbutton-color" content="#f8f5ec">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+<meta name="referrer" content="same-origin">
+<meta name="referrer" content="no-referrer">
 
 {#- Website description -#}
 {%- if page.description -%}

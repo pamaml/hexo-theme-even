@@ -43,7 +43,7 @@
           {%- endif -%}
         </span>
         <span class="archive-post-title">
-          <a href="{{ url_for(post.path) }}" class="archive-post-link" target="_blank">
+          <a href="{{ url_for(post.path) }}" class="archive-post-link">
             {{ post.title }}
           </a>
         </span>
