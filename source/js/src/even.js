@@ -100,7 +100,7 @@
     }
   };
 
-  Even.prototype.tocFollow = function () {
+  /*Even.prototype.tocFollow = function () {
     var HEADERFIX = 30;
     var $toclink = $('.toc-link'),
       $headerlink = $('.headerlink');
@@ -120,6 +120,82 @@
           $($toclink[i]).addClass('active');
         } else {
           $($toclink[i]).removeClass('active');
+        }
+      }
+    });
+  };*/
+  
+  Even._initToc = function() {
+    const SPACING = 20;
+    const $toc = $('.post-toc');
+    const $footer = $('.post-footer');
+  
+    if ($toc.length) {
+      const minScrollTop = $toc.offset().top - SPACING;
+      const maxScrollTop = $footer.offset().top - $toc.height() - SPACING;
+  
+      const tocState = {
+        start: {
+          'position': 'absolute',
+          'top': minScrollTop,
+        },
+        process: {
+          'position': 'fixed',
+          'top': SPACING,
+        },
+        end: {
+          'position': 'absolute',
+          'top': maxScrollTop,
+        },
+      };
+  
+      $(window).scroll(function() {
+        const scrollTop = $(window).scrollTop();
+  
+        if (scrollTop < minScrollTop) {
+          $toc.css(tocState.start);
+        } else if (scrollTop > maxScrollTop) {
+          $toc.css(tocState.end);
+        } else {
+          $toc.css(tocState.process);
+        }
+      });
+    }
+  
+    const HEADERFIX = 30;
+    const $toclink = $('.toc-link');
+    const $headerlink = $('.headerlink');
+    const $tocLinkLis = $('.post-toc-content li');
+  
+    const headerlinkTop = $.map($headerlink, function(link) {
+      return $(link).offset().top;
+    });
+  
+    const headerLinksOffsetForSearch = $.map(headerlinkTop, function(offset) {
+      return offset - HEADERFIX;
+    });
+  
+    const searchActiveTocIndex = function(array, target) {
+      for (let i = 0; i < array.length - 1; i++) {
+        if (target > array[i] && target <= array[i + 1]) return i;
+      }
+      if (target > array[array.length - 1]) return array.length - 1;
+      return -1;
+    };
+  
+    $(window).scroll(function() {
+      const scrollTop = $(window).scrollTop();
+      const activeTocIndex = searchActiveTocIndex(headerLinksOffsetForSearch, scrollTop);
+  
+      $($toclink).removeClass('active');
+      $($tocLinkLis).removeClass('has-active');
+  
+      if (activeTocIndex !== -1) {
+        $($toclink[activeTocIndex]).addClass('active');
+        let ancestor = $toclink[activeTocIndex].parentNode;
+        while (ancestor.tagName !== 'NAV') {
+          $(ancestor).addClass('has-active');
+          ancestor = ancestor.parentNode.parentNode;
         }
       }
     });
